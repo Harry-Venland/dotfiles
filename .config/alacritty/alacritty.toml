@@ -1,28 +1,50 @@
+[general]
+import = [
+    "~/.config/alacritty/theme/dracula.toml",
+]
 live_config_reload = true
 
-import = [
-    "~/.config/alacritty/themes/gruvbox-dark.toml",
-]
+[env]
 
 [window]
-padding = {x = 5, y = 5}
-opacity = 0.8
-decorations = 'none'
+position = "None"
+padding = {
+    x = 1,
+    y = 1
+}
+dynamic_padding = false
+decorations = 'None'
+opacity = 1.0
 
 [scrolling]
 history = 10000
 multiplier = 3
 
 [font]
-normal.family = 'JetBrains Mono NL'
-normal.style = 'Regular'
-size = 14
+normal = {
+    family = 'JetBrainsMonoNL NF',
+    style = 'Regular'
+}
+size = 16
 
 [selection]
 save_to_clipboard = true
 
-[shell]
-program = '/bin/nu'
+[cursor]
+style = {
+    shape = 'Block',
+    blinking = 'Always'
+}
+vi_mode_style = 'None'
+blink_interval = 750
+
+[terminal]
+shell = {
+    program = '/usr/bin/zsh',
+    args = ['-l']
+    # tmux
+    #args = ['-c', 'tmux new-session']
+}
 
 [mouse]
 hide_when_typing = true
